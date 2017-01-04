@@ -1,0 +1,25 @@
+<template format="5"
+		revision="1"
+		name="MVP Flow Fragment"
+		description="Creates new MVP classes that are part of a flow managed by an activity - Creates a Presenter, View and Fragment">
+
+	<category value="Fragment" />
+
+	<parameter id="className"
+		name="Fragment Name"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="Mvp"
+		help="Variable name that will be used to name the generated files e.g Login"/>
+
+		<parameter
+        id="fragment_layout"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="fragment_layout"
+        name="Fragment layout name" />
+
+	<globals file="globals.xml.ftl" />
+  <execute file="recipe.xml.ftl" />
+
+</template>

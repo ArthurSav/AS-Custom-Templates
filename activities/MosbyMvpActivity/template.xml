@@ -1,0 +1,19 @@
+<template format="4"
+		revision="1"
+		name="MVP Activity(Mosby)"
+		description="Creates new MVP classes based on the Mosby lib - Presenter, View and Activity">
+
+	<category value="Activity" />
+	<formfactor value="Mobile" />
+
+	<parameter id="className"
+		name="Activity Name"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="Mvp"
+		help="Variable name that will be used to name the generated files e.g Login"/>
+
+	<globals file="globals.xml.ftl" />
+  <execute file="recipe.xml.ftl" />
+
+</template>
